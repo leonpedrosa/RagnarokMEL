@@ -8,7 +8,7 @@ a{
     color: white;
 }
 body{
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.377),rgba(3, 3, 31, 0.603)),url(./assets/bg.jpg);
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.205),rgba(3, 3, 31, 0.295)),url(./assets/bg.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: relative;
@@ -24,28 +24,35 @@ body{
 }
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 580px;
     margin: auto;
+    margin-top: 10px;
 }
 header img{
     border-radius: 50%;
-    width: 50px;
+    width: 80px;
     margin-left: 5px;
 }
-header nav{
-    color: white;
-    width: 50%;
-    display: flex;
-}
-header nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
+@media screen  and (max-width:600px){
+    header{
+        display: none;
+    }
+    ul.lista-grupos a{
+        width: 90px;
+        height: 90px;
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+    ul.lista-grupos a span{
+        text-align: center;
+    }
+    .lista-utilitarios li a img{
+        width: 50px;
+    }
+}
 main{
     max-width: 580px;
     height: auto;
@@ -60,7 +67,10 @@ main section{
 }
 main section div{
     color: white;
-    background-color: rgba(207, 176, 74, 0.349);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: rgba(7, 15, 58, 0.349);
     backdrop-filter: blur(3px);
     padding: 32px;
     padding-top: 24px;
@@ -68,9 +78,31 @@ main section div{
 }
 main section ul{
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    gap: 10px;
     list-style: none;
     flex-wrap: wrap;
+    margin-top: 24px;
+}
+ul.lista-utilitarios{
+    justify-content: space-around;
+}
+.lista-grupos a{
+    width: 110px;
+    height: 70px;
+}
+ul.lista-grupos{
+    justify-content: space-between;
+}
+/* .lista-grupos{
+    display: flex;
+    justify-content: center;
+} */
+main section ul li{
+    transition: .3s;
+}
+main section ul li:hover{
+    transform: scale(1.2);
 }
 main section ul li a{
     display: flex;
@@ -79,13 +111,17 @@ main section ul li a{
     gap: 6px;
 }
 .lista-grupos img{
-    width: 60px;
-    border: 1px solid blue;
+    width: 50px;
     border-radius: 50%;
+}
+.lista-utilitarios img{
+    width: 60px;
+    height: 70px;
+    border-radius: 20%;
 }
 
 .lista-canais img{
-    width: 80px;
+    width: 70px;
     border: 1px solid blue;
-    border-radius: 50%;
+    border-radius: 20%;
 }
