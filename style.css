@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', 'Time-news-roman', sans-serif;
 }
 a{
     text-decoration: none;
@@ -39,16 +40,8 @@ header img{
     header{
         display: none;
     }
-    ul.lista-grupos a{
-        width: 90px;
-        height: 90px;
-        /* display: flex; */
-        /* align-items: center; */
-        /* justify-content: center; */
-    }
-    ul.lista-grupos a span{
-        text-align: center;
-    }
+
+  
     .lista-utilitarios li a img{
         width: 50px;
     }
@@ -84,6 +77,7 @@ main section ul{
     flex-wrap: wrap;
     margin-top: 24px;
 }
+
 ul.lista-utilitarios{
     justify-content: space-around;
 }
@@ -110,6 +104,17 @@ main section ul li a{
     align-items: center;
     gap: 6px;
 }
+
+ul.lista-grupos a{
+    width: 90px;
+    height: 90px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+ul.lista-grupos a span{
+    text-align: center;
+}
 .lista-grupos img{
     width: 50px;
     border-radius: 50%;
@@ -123,5 +128,34 @@ main section ul li a{
 .lista-canais img{
     width: 70px;
     border: 1px solid blue;
+    border-radius: 20%;
+}
+
+/* Footer  */
+footer{
+    display: flex;
+    /* max-width: 580px; */
+    width: 100%;
+}
+#contato{
+    width: 50%;
+    border: 1px solid red;
+}
+#sobre{
+    border: 1px solid red;
+    width: 50%;
+}
+#character{
+    display: flex;
+    justify-content: space-around;
+}
+footer img{
+    width: 200px;
+    height: 200px;
+}
+
+#wendle{
+    /* border: 1px solid red; */
+    overflow: hidden;
     border-radius: 20%;
 }
